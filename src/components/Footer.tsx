@@ -12,7 +12,7 @@ export function Footer() {
                 alt="Khan Consulting"
                 width={160}
                 height={40}
-                className="h-7 w-auto md:h-8 bg-transparent"
+                className="h-8 w-auto md:h-9 bg-transparent"
               />
             </Link>
             <p className="mt-1 text-sm text-gray-500">

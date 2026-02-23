@@ -70,7 +70,7 @@ export function Nav() {
             alt="Khan Consulting"
             width={160}
             height={40}
-            className="h-8 w-auto md:h-9 bg-transparent"
+            className="h-10 w-auto md:h-11 bg-transparent"
           />
         </Link>
         <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
