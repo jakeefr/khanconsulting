@@ -127,7 +127,7 @@ export default function GradientText({
           backgroundPosition,
           WebkitBackgroundClip: 'text',
           backgroundClip: 'text',
-          padding: '0.02em 0',
+          padding: '0.02em 0 0.12em 0',
         }}
       >
         {children}
