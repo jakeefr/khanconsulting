@@ -195,7 +195,7 @@ export function ContactPageContent() {
                       name="website"
                       type="url"
                       className={inputClass}
-                      placeholder="https://"
+                      placeholder="Optional"
                     />
                   </div>
                   <div>
