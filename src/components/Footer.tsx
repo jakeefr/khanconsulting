@@ -22,7 +22,7 @@ export function Footer() {
           <ul className="flex items-center gap-8">
             <li>
               <Link
-                href="#home"
+                href="/#home"
                 className="text-sm text-gray-300 hover:text-white transition-colors"
               >
                 Home
@@ -30,7 +30,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="#results"
+                href="/#results"
                 className="text-sm text-gray-300 hover:text-white transition-colors"
               >
                 Results
@@ -38,7 +38,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="#about"
+                href="/#about"
                 className="text-sm text-gray-300 hover:text-white transition-colors"
               >
                 About
