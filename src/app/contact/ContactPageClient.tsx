@@ -51,7 +51,7 @@ export function ContactPageContent() {
       for (const [key, value] of data.entries()) {
         if (typeof value === "string") params.append(key, value);
       }
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
