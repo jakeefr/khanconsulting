@@ -98,14 +98,13 @@ export default function ResultsPage() {
             budget. We’ll set clear targets with you.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <MetricCard value="2–4x" label="ROAS (example)" placeholder />
+            <MetricCard value="2–4x" label="ROAS (example)" />
             <MetricCard
               value="30–50%"
               label="Lead-to-book (example)"
-              placeholder
             />
-            <MetricCard value="100+" label="Calls/month (example)" placeholder />
-            <MetricCard value="&lt; 24h" label="First touch" placeholder />
+            <MetricCard value="100+" label="Calls/month (example)" />
+            <MetricCard value="&lt; 24h" label="First touch" />
           </div>
         </Container>
       </Section>
