@@ -80,7 +80,7 @@ const FAQ_ITEMS = [
   {
     question: "How quickly can we see booked appointments?",
     answer:
-      "Timeline depends on your market, offer, and budget. Many partners see first booked calls within 2–4 weeks of launch. We'll give you a realistic timeline on the intro call.",
+      "Timeline depends on your market, offer, and budget. Many partners see first booked calls within a week of launch. We'll give you a realistic timeline on the intro call.",
   },
   {
     question: "Do you work with any industry or only specific verticals?",
