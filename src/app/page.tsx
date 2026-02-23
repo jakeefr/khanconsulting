@@ -111,27 +111,29 @@ export default function HomePage() {
       <Section id="home" className="pt-24 md:pt-32 pb-20 md:pb-28">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-              <GradientText
-                colors={["#ffffff", "#172d4a", "#38bdf8", "#172d4a", "#ffffff"]}
-                animationSpeed={12.5}
-                showBorder={false}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              >
-                Automated Growth.
-              </GradientText>
-            </h1>
-            <div className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-              <GradientText
-                colors={["#ffffff", "#172d4a", "#38bdf8", "#172d4a", "#ffffff"]}
-                animationSpeed={12.5}
-                showBorder={false}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              >
-                Intelligent Results.
-              </GradientText>
+            <div className="font-bold">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+                <GradientText
+                  colors={["#ffffff", "#172d4a", "#38bdf8", "#172d4a", "#ffffff"]}
+                  animationSpeed={12.5}
+                  showBorder={false}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold"
+                >
+                  Automated Growth.
+                </GradientText>
+              </h1>
+              <div className="mt-4 text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+                <GradientText
+                  colors={["#ffffff", "#172d4a", "#38bdf8", "#172d4a", "#ffffff"]}
+                  animationSpeed={12.5}
+                  showBorder={false}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold"
+                >
+                  Intelligent Results.
+                </GradientText>
+              </div>
             </div>
-            <p className="mt-6 text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed text-center md:text-center">
+            <p className="mt-6 text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed text-center md:text-center">
               Paid ads. Smart lead qualification. Automated follow-up.
               <br />
               We generate the opportunities — you close the deals.

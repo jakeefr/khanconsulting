@@ -96,9 +96,10 @@ export default function GradientText({
     backgroundRepeat: 'repeat'
   };
 
+  const useBold = className?.includes('font-bold');
   return (
     <motion.div
-      className={`relative mx-auto flex max-w-fit flex-row items-center justify-center font-medium transition-shadow duration-500 overflow-visible ${showBorder ? 'py-1 px-2' : ''} ${className}`}
+      className={`relative mx-auto flex max-w-fit flex-row items-center justify-center ${useBold ? 'font-bold' : 'font-medium'} transition-shadow duration-500 overflow-visible ${showBorder ? 'py-1 px-2' : ''} ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
