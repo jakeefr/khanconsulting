@@ -51,12 +51,13 @@ export function ContactPageContent() {
       for (const [key, value] of data.entries()) {
         if (typeof value === "string") params.append(key, value);
       }
-      const response = await fetch("/__forms.html", {
+      if (!params.has("form-name")) params.set("form-name", "contact");
+      const response = await fetch("/_forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
       });
-      if (!response.ok) throw new Error("Submission failed");
+      if (response.status < 200 || response.status >= 300) throw new Error("Submission failed");
       setSubmitted(true);
       form.reset();
     } catch {
@@ -123,12 +124,12 @@ export function ContactPageContent() {
                   method="POST"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
-                  action="/contact?success=1"
+                  action="/_forms.html"
                   onSubmit={handleSubmit}
                   className={`space-y-5 ${showSuccess ? "hidden" : ""}`}
                 >
                   <input type="hidden" name="form-name" value="contact" />
-                  <input name="bot-field" className="hidden" aria-hidden />
+                  <input type="hidden" name="bot-field" />
                   <div>
                     <label
                       htmlFor="name"
