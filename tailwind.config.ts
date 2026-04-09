@@ -21,12 +21,17 @@ const config: Config = {
         ],
       },
       colors: {
-        navy: {
-          DEFAULT: "#172d4a",
-          800: "#1e3a5f",
-          900: "#0f2439",
+        /** Primary actions / emphasis (replaces old navy CTA). */
+        ink: {
+          DEFAULT: "#0a0a0a",
+          muted: "#404040",
         },
-        "light-blue": "#38bdf8",
+      },
+      boxShadow: {
+        surface:
+          "0 1px 2px rgb(0 0 0 / 0.04), 0 4px 12px rgb(0 0 0 / 0.06)",
+        "surface-md":
+          "0 2px 4px rgb(0 0 0 / 0.04), 0 8px 24px rgb(0 0 0 / 0.08)",
       },
     },
   },

@@ -37,10 +37,10 @@ export default function ResultsPage() {
     <>
       <Section className="pt-20 md:pt-28 pb-12">
         <Container>
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight max-w-3xl">
             Results we help partners achieve
           </h1>
-          <p className="mt-6 text-lg text-gray-300 max-w-2xl">
+          <p className="mt-6 text-lg text-neutral-600 max-w-2xl">
             Real outcomes come from combining paid acquisition with consistent
             follow-up and clear tracking. Below are example results and case
             snapshots — we’ll share what’s realistic for your situation on the
@@ -50,36 +50,36 @@ export default function ResultsPage() {
       </Section>
 
       {/* Case study cards - TODO: replace with real case studies and approved metrics */}
-      <Section className="bg-navy-800">
+      <Section className="bg-neutral-50">
         <Container>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-8">
             Case studies
           </h2>
           <div className="space-y-6">
             {CASE_STUDIES.map((cs, i) => (
               <Card key={i}>
-                <p className="text-sm font-medium text-gray-400">
+                <p className="text-sm font-medium text-neutral-500">
                   📍 {cs.location}
                 </p>
                 <div className="mt-4 grid md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
+                    <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider">
                       Problem
                     </h3>
-                    <p className="mt-1 text-gray-300">{cs.problem}</p>
+                    <p className="mt-1 text-neutral-600">{cs.problem}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
+                    <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider">
                       What we did
                     </h3>
-                    <p className="mt-1 text-gray-300">{cs.whatWeDid}</p>
+                    <p className="mt-1 text-neutral-600">{cs.whatWeDid}</p>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-white/20">
-                  <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
+                <div className="mt-6 pt-6 border-t border-neutral-200">
+                  <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider">
                     Outcome
                   </h3>
-                  <p className="mt-1 text-gray-300">{cs.outcome}</p>
+                  <p className="mt-1 text-neutral-600">{cs.outcome}</p>
                 </div>
               </Card>
             ))}
@@ -88,12 +88,12 @@ export default function ResultsPage() {
       </Section>
 
       {/* Metrics grid - placeholder */}
-      <Section className="bg-navy">
+      <Section className="bg-white">
         <Container>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-8">
             Example metrics
           </h2>
-          <p className="text-gray-300 max-w-2xl mb-10">
+          <p className="text-neutral-600 max-w-2xl mb-10">
             Illustrative numbers — actual results depend on industry, offer, and
             budget. We’ll set clear targets with you.
           </p>
@@ -113,17 +113,17 @@ export default function ResultsPage() {
       <Section className="py-20 bg-white">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
               Want results like these for your business?
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-neutral-600">
               Book a free call and we’ll walk through your goals and what’s
               possible.
             </p>
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-navy rounded-lg hover:bg-navy-800 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors"
               >
                 Get Started
               </Link>

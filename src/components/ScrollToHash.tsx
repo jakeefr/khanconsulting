@@ -3,9 +3,15 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
+/** Map legacy hash targets to current section ids (bookmark compatibility). */
+function resolveSectionId(raw: string): string {
+  if (raw === "about") return "process";
+  return raw;
+}
+
 /**
  * After client-side navigation to /#sectionId, scrolls the section into view.
- * Fixes hash links (e.g. Results, About) when using Next.js Link.
+ * Fixes hash links when using Next.js Link.
  */
 export function ScrollToHash() {
   const pathname = usePathname();
@@ -13,9 +19,10 @@ export function ScrollToHash() {
   useEffect(() => {
     if (pathname !== "/" || typeof window === "undefined") return;
     const scroll = () => {
-      const hash = window.location.hash?.slice(1);
-      if (!hash) return;
-      const el = document.getElementById(hash);
+      const raw = window.location.hash?.slice(1);
+      if (!raw) return;
+      const id = resolveSectionId(raw);
+      const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     };
     scroll();

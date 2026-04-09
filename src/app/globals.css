@@ -5,6 +5,14 @@
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Central semantic tokens (white-first SaaS) */
+  --color-canvas: #ffffff;
+  --color-canvas-subtle: #fafafa;
+  --color-ink: #0a0a0a;
+  --color-ink-secondary: #525252;
+  --color-ink-muted: #737373;
+  --color-border: rgb(0 0 0 / 0.08);
+  --color-border-strong: rgb(0 0 0 / 0.12);
 }
 
 html {
@@ -13,7 +21,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  @apply antialiased text-white bg-navy;
+  @apply antialiased text-neutral-900 bg-white;
 }
 
 /* GooeyNav - from @react-bits/GooeyNav, scoped to avoid hydration mismatch from inline <style> */
@@ -30,11 +38,11 @@ body {
   overflow: hidden;
 }
 .gooey-nav .effect.text {
-  color: white;
+  color: rgb(38 38 38);
   transition: color 0.3s ease;
 }
 .gooey-nav .effect.text.active {
-  color: black;
+  color: white;
 }
 .gooey-nav .effect.filter {
   filter: blur(7px) contrast(100) blur(0);
@@ -52,7 +60,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: white;
+  background: rgb(23 23 23);
   transform: scale(0);
   opacity: 0;
   z-index: -1;
@@ -135,7 +143,7 @@ body {
   }
 }
 .gooey-nav li.active {
-  color: black;
+  color: white;
   text-shadow: none;
 }
 .gooey-nav li.active::after {
@@ -147,7 +155,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 9999px;
-  background: white;
+  background: rgb(23 23 23);
   opacity: 0;
   transform: scale(0);
   transition: all 0.3s ease;

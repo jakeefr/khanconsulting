@@ -184,16 +184,15 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
       <nav className="flex relative z-10" style={{ transform: "translate3d(0,0,0.01px)" }}>
         <ul
           ref={navRef}
-          className="flex gap-8 list-none p-0 px-4 m-0 relative"
+          className="flex gap-8 list-none p-0 px-4 m-0 relative text-neutral-800"
           style={{
-            color: "white",
-            textShadow: "0 1px 1px hsl(205deg 30% 10% / 0.2)",
+            textShadow: "0 1px 1px rgb(255 255 255 / 0.8)",
           }}
         >
           {items.map((item, index) => (
             <li
               key={index}
-              className={`rounded-full relative cursor-pointer transition-[background-color_color_box-shadow] duration-300 ease shadow-[0_0_0.5px_1.5px_transparent] text-white ${
+              className={`rounded-full relative cursor-pointer transition-[background-color_color_box-shadow] duration-300 ease shadow-[0_0_0.5px_1.5px_transparent] text-neutral-800 ${
                 activeIndex === index ? "active" : ""
               }`}
             >

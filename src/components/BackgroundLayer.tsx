@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { faultyTerminalTint } from "@/theme/colors";
 
 const FaultyTerminal = dynamic(
   () => import("@/components/reactbits/FaultyTerminal").then((m) => m.default),
@@ -9,7 +10,7 @@ const FaultyTerminal = dynamic(
 );
 
 const backgroundFallback = (
-  <div className="absolute inset-0 w-full h-full bg-navy" aria-hidden />
+  <div className="absolute inset-0 w-full h-full bg-white" aria-hidden />
 );
 
 export function BackgroundLayer() {
@@ -23,26 +24,22 @@ export function BackgroundLayer() {
             digitSize={2.3}
             timeScale={0.5}
             pause={false}
-            scanlineIntensity={0.5}
+            scanlineIntensity={0.3}
             glitchAmount={1}
             flickerAmount={1}
             noiseAmp={1}
             chromaticAberration={0}
             dither={0}
             curvature={0.2}
-            tint="#172d4a"
+            tint={faultyTerminalTint}
             mouseReact={false}
             mouseStrength={0.5}
             pageLoadAnimation
-            brightness={0.6}
+            brightness={0.42}
             className="w-full h-full"
           />
         </ErrorBoundary>
       </div>
-      <div
-        className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#0b1b33]/70 via-[#0f2747]/70 to-[#0b1b33]/80"
-        aria-hidden
-      />
     </div>
   );
 }

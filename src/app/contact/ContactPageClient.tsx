@@ -3,8 +3,6 @@
 import { useState, FormEvent, useEffect } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
-import GradientText from "@/components/GradientTextClient";
-
 const AD_SPEND_OPTIONS = [
   "Select range",
   "Under $5k/month",
@@ -66,7 +64,7 @@ export function ContactPageContent() {
   }
 
   const inputClass =
-    "w-full px-4 py-2.5 border border-white/20 rounded-xl bg-white/5 text-white placeholder-gray-400 focus:ring-2 focus:ring-white/30 focus:border-white/40 outline-none transition-colors";
+    "w-full px-4 py-2.5 border border-neutral-200 rounded-xl bg-white text-neutral-900 placeholder-neutral-400 focus:ring-2 focus:ring-neutral-900/15 focus:border-neutral-400 outline-none transition-colors";
 
   const showSuccess = submitted;
 
@@ -75,17 +73,10 @@ export function ContactPageContent() {
       <Section className="pt-24 md:pt-32 pb-12">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <GradientText
-                colors={["#ffffff", "#172d4a", "#38bdf8", "#172d4a", "#ffffff"]}
-                animationSpeed={12.5}
-                showBorder={false}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              >
-                Get in touch
-              </GradientText>
+            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-semibold text-neutral-900 leading-tight tracking-tight">
+              Get in touch
             </h1>
-            <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
             Book a free call or send us a message. We'll respond within 1–2
             business days.
             </p>
@@ -95,26 +86,26 @@ export function ContactPageContent() {
 
       <Section className="relative pb-24">
         <Container>
-          <div className="rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 p-8 md:p-12">
+          <div className="rounded-xl border border-neutral-200/70 bg-white/75 backdrop-blur-sm p-8 md:p-12">
             <div className="grid md:grid-cols-5 gap-12">
               <div className="md:col-span-2">
-                <h2 className="text-xl font-semibold text-white mb-4">
+                <h2 className="text-xl font-semibold text-neutral-900 mb-4">
                   Direct contact
                 </h2>
-                <p className="text-gray-300 text-sm">
+                <p className="text-neutral-600 text-sm">
                   Email: support@khanconsulting.co
                 </p>
-                <p className="mt-2 text-gray-300 text-sm">
+                <p className="mt-2 text-neutral-600 text-sm">
                   Phone: (405) 239-8122
                 </p>
               </div>
               <div className="md:col-span-3">
                 {showSuccess ? (
-                  <div className="rounded-2xl md:rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 p-8 text-center">
-                    <p className="text-lg font-medium text-white">
+                  <div className="rounded-2xl md:rounded-3xl bg-neutral-50 border border-neutral-200/90 shadow-surface p-8 text-center">
+                    <p className="text-lg font-medium text-neutral-900">
                       Sent. We will get back to you soon.
                     </p>
-                    <p className="mt-2 text-gray-300 text-sm">
+                    <p className="mt-2 text-neutral-600 text-sm">
                       We typically respond within 1–2 business days.
                     </p>
                   </div>
@@ -133,7 +124,7 @@ export function ContactPageContent() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-300 mb-1"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
                     >
                       Name *
                     </label>
@@ -152,7 +143,7 @@ export function ContactPageContent() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-300 mb-1"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
                     >
                       Email *
                     </label>
@@ -171,7 +162,7 @@ export function ContactPageContent() {
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-medium text-gray-300 mb-1"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
                     >
                       Company
                     </label>
@@ -186,7 +177,7 @@ export function ContactPageContent() {
                   <div>
                     <label
                       htmlFor="website"
-                      className="block text-sm font-medium text-gray-300 mb-1"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
                     >
                       Website
                     </label>
@@ -201,7 +192,7 @@ export function ContactPageContent() {
                   <div>
                     <label
                       htmlFor="spend"
-                      className="block text-sm font-medium text-gray-300 mb-1"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
                     >
                       Monthly ad spend range *
                     </label>
@@ -213,7 +204,7 @@ export function ContactPageContent() {
                       aria-invalid={!!errors.spend}
                     >
                       {AD_SPEND_OPTIONS.map((opt) => (
-                        <option key={opt} value={opt} className="bg-navy-900 text-white">
+                        <option key={opt} value={opt} className="bg-white text-neutral-900">
                           {opt}
                         </option>
                       ))}
@@ -227,7 +218,7 @@ export function ContactPageContent() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-300 mb-1"
+                      className="block text-sm font-medium text-neutral-700 mb-1"
                     >
                       Message *
                     </label>
@@ -250,7 +241,7 @@ export function ContactPageContent() {
                   )}
                   <button
                     type="submit"
-                    className="w-full md:w-auto px-8 py-3 rounded-2xl font-semibold bg-white/10 border border-white/10 backdrop-blur-xl text-white hover:bg-white/15 hover:border-white/20 transition-all duration-200"
+                    className="w-full md:w-auto px-8 py-3 rounded-2xl font-semibold bg-neutral-900 border border-neutral-900 text-white hover:bg-neutral-800 hover:border-neutral-800 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   >
                     Send message
                   </button>
@@ -270,10 +261,10 @@ export function ContactPageFallback() {
       <Section className="pt-24 md:pt-32 pb-12">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-neutral-900">
               Get in touch
             </h1>
-            <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
               Book a free call or send us a message. We&apos;ll respond within 1–2
               business days.
             </p>
@@ -282,21 +273,21 @@ export function ContactPageFallback() {
       </Section>
       <Section className="relative pb-24">
         <Container>
-          <div className="rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 p-8 md:p-12">
+          <div className="rounded-xl border border-neutral-200/70 bg-white/75 backdrop-blur-sm p-8 md:p-12">
             <div className="grid md:grid-cols-5 gap-12">
               <div className="md:col-span-2">
-                <h2 className="text-xl font-semibold text-white mb-4">
+                <h2 className="text-xl font-semibold text-neutral-900 mb-4">
                   Direct contact
                 </h2>
-                <p className="text-gray-300 text-sm">
+                <p className="text-neutral-600 text-sm">
                   Email: support@khanconsulting.co
                 </p>
-                <p className="mt-2 text-gray-300 text-sm">
+                <p className="mt-2 text-neutral-600 text-sm">
                   Phone: (405) 239-8122
                 </p>
               </div>
               <div className="md:col-span-3 flex items-center justify-center min-h-[200px]">
-                <p className="text-gray-400">Loading...</p>
+                <p className="text-neutral-500">Loading...</p>
               </div>
             </div>
           </div>

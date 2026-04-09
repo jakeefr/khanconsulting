@@ -3,10 +3,11 @@ type CardProps = {
   className?: string;
 };
 
+/** Light surface card; prefer sparingly—many homepage sections now use flat dividers. */
 export function Card({ children, className = "" }: CardProps) {
   return (
     <div
-      className={`rounded-2xl md:rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 p-6 md:p-8 transition-all duration-200 hover:bg-white/10 hover:border-white/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/25 ${className}`}
+      className={`rounded-xl border border-neutral-200/70 bg-white/70 backdrop-blur-sm px-6 py-6 md:px-7 md:py-7 transition-colors hover:border-neutral-300/80 ${className}`}
     >
       {children}
     </div>

@@ -17,9 +17,9 @@ export function CTAButton({
     "inline-flex items-center justify-center font-semibold transition-all duration-200 rounded-2xl";
   const variants = {
     primary:
-      "bg-white/10 text-white border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 hover:bg-white/15 hover:border-white/20 hover:-translate-y-0.5 focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-transparent",
+      "bg-neutral-900 text-white border border-neutral-900 shadow-surface hover:bg-neutral-800 hover:border-neutral-800 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
     secondary:
-      "bg-white/5 text-white border-2 border-white/20 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5 focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-transparent",
+      "bg-white text-neutral-900 border-2 border-neutral-200 shadow-surface hover:bg-neutral-50 hover:border-neutral-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
   };
   const sizes = {
     sm: "px-4 py-2 text-sm",

@@ -14,20 +14,22 @@ export function StepRow({
   cta,
 }: StepRowProps) {
   return (
-    <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start rounded-2xl md:rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 p-6 md:p-8 transition-all duration-200 hover:bg-white/10 hover:border-white/15 hover:-translate-y-0.5">
-      <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl flex items-center justify-center text-lg font-bold text-white">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start py-8 border-b border-neutral-200/70 last:border-b-0">
+      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-neutral-900 text-white text-sm font-semibold flex items-center justify-center tabular-nums">
         {step}
       </div>
       <div className="flex-1 min-w-0">
-        <h3 className="text-xl md:text-2xl font-semibold text-white">
+        <h3 className="text-lg md:text-xl font-semibold text-neutral-900 tracking-tight">
           {title}
         </h3>
-        <p className="mt-3 text-gray-300 leading-relaxed">{description}</p>
+        <p className="mt-2 text-neutral-600 leading-relaxed text-[15px] md:text-base">
+          {description}
+        </p>
         {bullets && bullets.length > 0 && (
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-4 space-y-1.5">
             {bullets.map((b, i) => (
-              <li key={i} className="text-gray-300 text-sm flex gap-2">
-                <span className="text-gray-400">—</span>
+              <li key={i} className="text-neutral-600 text-sm flex gap-2">
+                <span className="text-neutral-400 shrink-0">·</span>
                 {b}
               </li>
             ))}

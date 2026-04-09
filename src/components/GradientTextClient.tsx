@@ -26,7 +26,7 @@ export default function GradientTextClient(props: GradientTextClientProps) {
 
   if (!mounted) {
     return (
-      <span className={props.className ?? ""}>
+      <span className={`text-neutral-900 ${props.className ?? ""}`}>
         {props.children}
       </span>
     );
