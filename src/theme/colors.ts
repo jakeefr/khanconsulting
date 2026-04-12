@@ -14,15 +14,17 @@ export const palette = {
   canvasSubtle: "#fafafa",
 } as const;
 
-/** Animated gradient text — hero (black ↔ light gray, premium contrast). */
+/** Animated gradient text — hero (mid-gray shimmer across near-black; never lighter than #666). */
 export const gradientTextHero: string[] = [
-  palette.ink,
-  palette.gray700,
-  palette.gray400,
-  palette.gray300,
-  palette.gray400,
-  palette.gray700,
-  palette.ink,
+  "#111111",
+  "#1a1a1a",
+  "#222222",
+  "#444444",
+  "#666666",
+  "#444444",
+  "#222222",
+  "#1a1a1a",
+  "#111111",
 ];
 
 /** Section / page titles using gradient text (monochrome, readable). */

@@ -1,7 +1,9 @@
 {
   "name": "khan-consulting",
   "version": "0.1.0",
-  "engines": { "node": ">=18.0.0 <22" },
+  "engines": {
+    "node": ">=18.0.0 <22"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,6 +14,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gsap": "^3.14.2",
     "motion": "^12.34.3",
     "next": "14.2.18",
     "ogl": "^1.0.11",

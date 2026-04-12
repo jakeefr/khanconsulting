@@ -3,6 +3,12 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollToHash } from "@/components/ScrollToHash";
+import dynamic from "next/dynamic";
+
+const ParallaxBackground = dynamic(
+  () => import("@/components/ParallaxBackground").then((m) => m.ParallaxBackground),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: "Khan Consulting | Growth systems for booked contractor work",
@@ -21,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="font-sans">
       <body className="min-h-screen flex flex-col bg-white relative">
+        <ParallaxBackground />
         <Nav />
         <ScrollToHash />
         <main className="flex-1 relative z-10">{children}</main>

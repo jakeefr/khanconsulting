@@ -30,8 +30,12 @@ export function CTAButton({
   return (
     <Link
       href={href}
-      className={`${base} ${variants[variant]} ${sizes[size]}`}
+      className={`${base} ${variants[variant]} ${sizes[size]} group relative overflow-hidden`}
     >
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+      />
       {children}
     </Link>
   );
