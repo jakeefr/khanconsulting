@@ -5,10 +5,10 @@
 
 export const homeMeta = {
   heroKicker: "Khan Consulting",
-  heroLine1: "Predictable pipeline.",
-  heroGradientLine: "Qualified work on your calendar.",
+  heroLine1: "Predictable growth.",
+  heroGradientLine: "Qualified work, booked consistently.",
   heroSupport:
-    "We help owner-led contractors and service businesses turn inbound interest into booked estimates and jobs—with fast follow-up, clear qualification, and reporting you can trust.",
+    "We keep qualified opportunities moving onto your calendar, so you can focus on winning the work.",
   heroCtaPrimary: "Book an intro call",
   heroCtaSecondary: "See how it works",
   trustNote: "Intro call first · Systems you can run · Built for trades & field service",
@@ -45,7 +45,9 @@ export const homeMeta = {
     "Remodeling & residential build",
     "Concrete & flatwork",
     "Landscaping & outdoor",
+    "Decking & outdoor living",
     "Restoration & mitigation",
+    "Kitchen & bath",
     "Commercial service contractors",
     "Professional services with field teams",
   ],

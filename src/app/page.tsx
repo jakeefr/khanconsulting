@@ -7,11 +7,40 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import GradientText from "@/components/GradientTextClient";
 import { gradientTextHero } from "@/theme/colors";
 import { homeMeta } from "@/content/home";
+import type { IconType } from "react-icons";
+import {
+  LuBriefcase,
+  LuBuilding2,
+  LuDroplet,
+  LuHammer,
+  LuHardHat,
+  LuHouse,
+  LuLayers,
+  LuShieldAlert,
+  LuSnowflake,
+  LuTreePine,
+  LuZap,
+} from "react-icons/lu";
 
 const h2 = "text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight";
 const intro = "mt-4 text-base md:text-[17px] text-neutral-600 leading-relaxed max-w-2xl";
 
 export default function HomePage() {
+  const whoIconByNiche: Record<string, IconType> = {
+    "HVAC & mechanical": LuSnowflake,
+    Plumbing: LuDroplet,
+    Electrical: LuZap,
+    "Roofing & exteriors": LuHouse,
+    "Remodeling & residential build": LuHammer,
+    "Concrete & flatwork": LuLayers,
+    "Landscaping & outdoor": LuTreePine,
+    "Decking & outdoor living": LuTreePine,
+    "Restoration & mitigation": LuShieldAlert,
+    "Kitchen & bath": LuHouse,
+    "Commercial service contractors": LuBuilding2,
+    "Professional services with field teams": LuBriefcase,
+  };
+
   const faqItems = homeMeta.faqs.map((f) => ({
     question: f.question,
     answer: f.answer,
@@ -19,30 +48,42 @@ export default function HomePage() {
 
   return (
     <>
-      <Section id="home" variant="hero">
+      <Section
+        id="home"
+        variant="hero"
+        className="min-h-[calc(100svh-72px)] md:min-h-[calc(100svh-80px)] flex items-center"
+      >
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[11px] md:text-xs font-medium uppercase tracking-[0.2em] text-neutral-500 mb-3">
+          <div className="w-full max-w-3xl lg:max-w-5xl mx-auto text-center">
+            <p className="text-[11px] md:text-xs font-medium uppercase tracking-[0.2em] text-neutral-500 mb-4 md:mb-5">
               {homeMeta.heroKicker}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-semibold leading-[1.12] tracking-tight">
-              <span className="block text-neutral-900">{homeMeta.heroLine1}</span>
-              <span className="mt-3 md:mt-4 block text-4xl md:text-5xl lg:text-[3.25rem]">
+            <h1 className="text-4xl md:text-6xl lg:text-[3.75rem] font-semibold leading-[1.06] tracking-tight">
+              <span className="block">
                 <GradientText
                   colors={gradientTextHero}
                   animationSpeed={7}
                   showBorder={false}
-                  className="text-4xl md:text-5xl lg:text-[3.25rem] font-semibold"
+                  className="font-semibold"
+                >
+                  {homeMeta.heroLine1}
+                </GradientText>
+              </span>
+              <span className="mt-2.5 md:mt-3.5 block text-4xl md:text-6xl lg:text-[3.75rem] lg:whitespace-nowrap">
+                <GradientText
+                  colors={gradientTextHero}
+                  animationSpeed={7}
+                  showBorder={false}
+                  className="text-4xl md:text-6xl lg:text-[3.75rem] font-semibold"
                 >
                   {homeMeta.heroGradientLine}
                 </GradientText>
               </span>
             </h1>
-            <p className={`${intro} mx-auto mt-6`}>{homeMeta.heroSupport}</p>
-            <p className="mt-4 text-xs md:text-sm text-neutral-500 max-w-xl mx-auto">
-              {homeMeta.trustNote}
+            <p className="mx-auto mt-6 md:mt-7 text-[15px] md:text-lg text-neutral-600 leading-relaxed max-w-2xl">
+              {homeMeta.heroSupport}
             </p>
-            <div className="mt-10 flex flex-wrap gap-3 justify-center">
+            <div className="mt-10 md:mt-12 flex flex-wrap gap-3 justify-center">
               <CTAButton href="/contact" size="lg">
                 {homeMeta.heroCtaPrimary}
               </CTAButton>
@@ -50,11 +91,48 @@ export default function HomePage() {
                 {homeMeta.heroCtaSecondary}
               </CTAButton>
             </div>
+
+            <div className="mt-12 md:mt-14 max-w-3xl mx-auto">
+              <div className="h-px w-full bg-neutral-200/70" aria-hidden="true" />
+              <dl className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
+                <div className="text-center">
+                  <dt className="sr-only">Opportunities booked</dt>
+                  <dd className="text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
+                    250+
+                  </dd>
+                  <div className="mt-1.5 text-xs md:text-sm text-neutral-500">
+                    Opportunities booked
+                  </div>
+                </div>
+                <div className="text-center">
+                  <dt className="sr-only">ROI</dt>
+                  <dd className="text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
+                    12x
+                  </dd>
+                  <div className="mt-1.5 text-xs md:text-sm text-neutral-500">
+                    ROI
+                  </div>
+                </div>
+                <div className="text-center">
+                  <dt className="sr-only">Client revenue</dt>
+                  <dd className="text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
+                    $4.5M+
+                  </dd>
+                  <div className="mt-1.5 text-xs md:text-sm text-neutral-500">
+                    Client revenue
+                  </div>
+                </div>
+              </dl>
+            </div>
           </div>
         </Container>
       </Section>
 
-      <Section id="what-we-do" variant="tight" className="border-t border-neutral-200/70 bg-white/40">
+      <Section
+        id="what-we-do"
+        variant="tight"
+        className="scroll-mt-20 md:scroll-mt-24 border-t border-neutral-200/70 bg-white/40"
+      >
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className={h2}>What we do</h2>
@@ -87,16 +165,26 @@ export default function HomePage() {
             <h2 className={h2}>Who we help</h2>
             <p className={`${intro} mt-3 mx-auto`}>{homeMeta.whoIntro}</p>
           </div>
-          <ul className="mt-10 flex flex-wrap justify-center gap-2.5 max-w-5xl mx-auto">
-            {homeMeta.whoNiches.map((niche) => (
-              <li
-                key={niche}
-                className="w-full sm:w-[calc(50%-5px)] lg:w-[calc(33.333%-7px)] rounded-xl border border-neutral-200/70 bg-white px-5 py-4 text-[14px] font-semibold text-neutral-800 tracking-tight text-center shadow-surface transition-all duration-200 hover:-translate-y-1 hover:shadow-surface-md hover:border-neutral-300/80"
-              >
-                {niche}
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10 max-w-5xl mx-auto">
+            <div className="rounded-2xl border border-neutral-200/70 bg-white/70 overflow-hidden">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y divide-neutral-200/70 sm:divide-x sm:divide-y-0 lg:divide-x">
+                {homeMeta.whoNiches.map((niche) => {
+                  const Icon = whoIconByNiche[niche] ?? LuHardHat;
+                  return (
+                    <div
+                      key={niche}
+                      className="group flex flex-col items-center justify-center text-center px-7 py-9 min-h-[108px] bg-transparent transition-colors duration-200 hover:bg-neutral-50/60"
+                    >
+                      <Icon className="h-5 w-5 text-neutral-700" aria-hidden="true" />
+                      <div className="mt-3 text-[13px] sm:text-[14px] font-semibold text-neutral-800 tracking-tight">
+                        {niche}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </Container>
       </Section>
 
