@@ -3,12 +3,7 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ScrollToHash } from "@/components/ScrollToHash";
-import dynamic from "next/dynamic";
-
-const ParallaxBackground = dynamic(
-  () => import("@/components/ParallaxBackground").then((m) => m.ParallaxBackground),
-  { ssr: false }
-);
+import ParallaxBackground from "@/components/ParallaxBackgroundDynamic";
 
 export const metadata: Metadata = {
   title: "Khan Consulting | Growth systems for booked contractor work",
@@ -25,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="font-sans">
+    <html lang="en" className="font-sans" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className="min-h-screen flex flex-col bg-white relative">
         <ParallaxBackground />
         <Nav />

@@ -1,57 +1,31 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
 import GooeyNav from "@/components/reactbits/GooeyNav";
 
 const gooeyItems = [
   { label: "Home", href: "/" },
-  { label: "What we do", href: "/#what-we-do" },
-  { label: "Process", href: "/#process" },
-  { label: "Results", href: "/#results" },
+  { label: "Client Results", href: "/client-results" },
   { label: "Contact", href: "/contact" },
 ];
 
 const mobileLinks = [
-  { label: "Offer", href: "/#what-we-do" },
-  { label: "Who", href: "/#who" },
-  { label: "Process", href: "/#process" },
-  { label: "Results", href: "/#results" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Home", href: "/" },
+  { label: "Client Results", href: "/client-results" },
 ];
 
-function useHash() {
-  const [hash, setHash] = useState("");
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const read = () =>
-      setHash(typeof window !== "undefined" ? window.location.hash.slice(1) : "");
-    read();
-    window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
-  }, [pathname]);
-
-  return hash;
-}
-
-function activeIndexFor(hash: string, pathname: string): number {
-  if (pathname === "/contact") return 4;
-  if (pathname === "/about") return 2;
-  if (pathname === "/results") return 3;
-  if (pathname !== "/") return 0;
-
-  if (hash === "results") return 3;
-  if (hash === "what-we-do") return 1;
-  if (hash === "process" || hash === "about") return 2;
+function activeIndexFor(pathname: string): number {
+  if (pathname === "/contact") return 2;
+  if (pathname === "/client-results") return 1;
+  if (pathname === "/") return 0;
   return 0;
 }
 
 export function Nav() {
   const pathname = usePathname();
-  const hash = useHash();
-  const activeIndex = activeIndexFor(hash, pathname);
+  const activeIndex = activeIndexFor(pathname);
 
   return (
     <header
@@ -62,7 +36,7 @@ export function Nav() {
           "--color-2": "#737373",
           "--color-3": "#525252",
           "--color-4": "#e5e5e5",
-        } as React.CSSProperties
+        } as CSSProperties
       }
     >
       <nav

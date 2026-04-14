@@ -9,8 +9,8 @@ export const homeMeta = {
   heroGradientLine: "Qualified work, booked consistently.",
   heroSupport:
     "We keep qualified opportunities moving onto your calendar, so you can focus on winning the work.",
-  heroCtaPrimary: "Book an intro call",
-  heroCtaSecondary: "See how it works",
+  heroCtaPrimary: "View Client Results",
+  heroCtaSecondary: "Book a call",
   trustNote: "Intro call first · Systems you can run · Built for trades & field service",
 
   whatWeDoIntro:

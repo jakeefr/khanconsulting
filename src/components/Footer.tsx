@@ -83,9 +83,17 @@ export function Footer() {
             </li>
           </ul>
         </div>
-        <div className="mt-8 pt-8 border-t border-neutral-200/80 text-center text-sm text-neutral-500">
-          © {new Date().getFullYear()} Khan Consulting. All rights reserved.
-          <p className="mt-1.5 text-neutral-500">Made by WernersWorks</p>
+        <div className="mt-8 pt-8 border-t border-neutral-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-neutral-500">
+          <div className="text-center sm:text-left">
+            <p>© {new Date().getFullYear()} Khan Consulting. All rights reserved.</p>
+            <p className="mt-1 text-neutral-400">Made by WernersWorks</p>
+          </div>
+          <Link
+            href="/precall"
+            className="text-neutral-400 hover:text-neutral-600 transition-colors text-xs tracking-wide"
+          >
+            Precall
+          </Link>
         </div>
       </div>
     </footer>

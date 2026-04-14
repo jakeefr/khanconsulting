@@ -84,10 +84,10 @@ export default function HomePage() {
               {homeMeta.heroSupport}
             </p>
             <div className="mt-10 md:mt-12 flex flex-wrap gap-3 justify-center">
-              <CTAButton href="/contact" size="lg">
+              <CTAButton href="/client-results" size="lg">
                 {homeMeta.heroCtaPrimary}
               </CTAButton>
-              <CTAButton href="/#process" size="lg" variant="secondary">
+              <CTAButton href="/contact" size="lg" variant="secondary">
                 {homeMeta.heroCtaSecondary}
               </CTAButton>
             </div>
