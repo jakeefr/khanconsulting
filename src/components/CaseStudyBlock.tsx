@@ -1,4 +1,5 @@
 import { CaseStudyVideoSlot } from "@/components/CaseStudyVideoSlot";
+import { WistiaVideoEmbed } from "@/components/WistiaVideoEmbed";
 import type { ClientCaseStudy } from "@/content/clientResults";
 
 /**
@@ -14,51 +15,62 @@ export function CaseStudyBlock({
 }) {
   const detail = (
     <div className="flex flex-col justify-center min-w-0">
-      <div className="grid grid-cols-3 gap-3 sm:gap-4">
+      {/* Minimal stat row — large number, small gray label, no heavy cards */}
+      <div className="flex items-start gap-8 sm:gap-10">
         {study.metrics.map((m) => (
-          <div
-            key={m.label}
-            className="rounded-xl border border-neutral-200/90 bg-white/80 px-3 py-3 sm:px-4 sm:py-3.5"
-          >
-            <p className="text-lg sm:text-xl font-semibold text-neutral-900 tracking-tight tabular-nums">
+          <div key={m.label} className="shrink-0">
+            <p className="text-2xl sm:text-3xl font-semibold text-neutral-900 tracking-tight tabular-nums leading-none">
               {m.value}
             </p>
-            <p className="mt-1 text-[11px] sm:text-xs text-neutral-500 leading-snug">
+            <p className="mt-1.5 text-[11px] sm:text-xs text-neutral-500 leading-snug">
               {m.label}
             </p>
           </div>
         ))}
       </div>
-      <p className="mt-6 text-sm text-neutral-800">
-        <span className="font-medium text-neutral-900">{study.clientName}</span>
-        <span className="text-neutral-400 mx-2" aria-hidden>
-          ·
+
+      {/* Name — Company */}
+      <p className="mt-7 text-sm font-medium text-neutral-900">
+        {study.clientName}
+        <span className="mx-1.5 text-neutral-400" aria-hidden>
+          —
         </span>
-        <span className="text-neutral-600">{study.companyAndTrade}</span>
+        <span className="font-normal text-neutral-500">
+          {study.companyAndTrade}
+        </span>
       </p>
-      <p className="mt-3 text-base text-neutral-600 leading-relaxed max-w-xl">
+
+      {/* Summary */}
+      <p className="mt-3 text-[15px] text-neutral-600 leading-relaxed max-w-lg">
         {study.summary}
       </p>
-      <blockquote className="mt-6 border-l-2 border-neutral-300 pl-5 text-neutral-800 leading-relaxed max-w-xl">
-        <p className="text-[15px] md:text-base italic">&ldquo;{study.quote}&rdquo;</p>
+
+      {/* Quote */}
+      <blockquote className="mt-6 border-l-2 border-neutral-200 pl-4 max-w-lg">
+        <p className="text-[15px] md:text-base text-neutral-700 italic leading-relaxed">
+          &ldquo;{study.quote}&rdquo;
+        </p>
+        {study.quoteAttribution && (
+          <p className="mt-2 text-xs text-neutral-400 not-italic">
+            {study.quoteAttribution}
+          </p>
+        )}
       </blockquote>
     </div>
   );
 
   const media = (
     <div className="min-w-0">
-      {/*
-        Future embed example:
-        <CaseStudyVideoSlot label={`${study.clientName} story`}>
-          <iframe className="absolute inset-0 h-full w-full" src="..." title="..." />
-        </CaseStudyVideoSlot>
-      */}
-      <CaseStudyVideoSlot label={`${study.clientName} — video story`} />
+      {study.wistiaId ? (
+        <WistiaVideoEmbed mediaId={study.wistiaId} />
+      ) : (
+        <CaseStudyVideoSlot label={`${study.clientName} — video story`} />
+      )}
     </div>
   );
 
   return (
-    <article className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-center">
+    <article className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-14 items-center">
       {videoOnLeft ? (
         <>
           {media}

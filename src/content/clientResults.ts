@@ -1,8 +1,3 @@
-/**
- * Placeholder case studies — swap entries and media when final client stories are approved.
- * Video slots accept embed markup later (Loom, Vimeo, YouTube, or custom thumbnail + player).
- */
-
 export type CaseStudyMetric = {
   label: string;
   value: string;
@@ -15,65 +10,66 @@ export type ClientCaseStudy = {
   metrics: [CaseStudyMetric, CaseStudyMetric, CaseStudyMetric];
   summary: string;
   quote: string;
+  /** Attribution line shown below the blockquote, e.g. "— Aaron, North 53 Construction" */
+  quoteAttribution?: string;
+  /** Optional Wistia media ID — renders an inline Wistia embed instead of the placeholder */
+  wistiaId?: string;
 };
 
 export const clientResultsIntro = {
   eyebrow: "CASE STUDIES",
-  headlineLine1: "Outcomes on the record.",
-  headlineLine2: "Partners we’ve grown with.",
+  headlineLine1: "Built on results.",
+  headlineLine2: "Backed by stories.",
   supporting:
-    "A look at how contractors and service businesses scale pipeline, bookings, and revenue with paid acquisition and follow-up systems.",
-  scrollHint: "Scroll to explore",
-};
-
-/** Subtle aggregate strip — illustrative placeholders */
-export const aggregateProof = {
-  opportunitiesBooked: "780+",
-  clientRevenue: "$1.2M+",
-  roi: "6–10x",
+    "See how contractors are building steadier pipelines, booking better opportunities, and creating growth they can actually feel.",
+  scrollHint: "Scroll to see results",
 };
 
 export const caseStudies: ClientCaseStudy[] = [
   {
-    id: "scott-houston-concrete",
-    clientName: "Scott",
-    companyAndTrade: "Houston Area Concrete",
+    id: "aaron-north53-construction",
+    clientName: "Aaron",
+    companyAndTrade: "North 53 Construction",
     metrics: [
-      { value: "250+", label: "Opportunities booked" },
-      { value: "8x", label: "ROI" },
-      { value: "$420K", label: "Client revenue" },
+      { value: "$1.8K", label: "Ad Spend" },
+      { value: "$200K", label: "Revenue" },
+      { value: "110x", label: "Return" },
     ],
     summary:
-      "Tightened lead routing from Meta campaigns into a single booking flow. Follow-up scripts and SMS reminders lifted show-up rate within the first quarter.",
+      "Aaron had grown mostly through word of mouth and referrals, but the flow of new work was becoming too unpredictable. He needed a more consistent way to create opportunities, keep his pipeline active, and bring in steady jobs without waiting on referrals.",
     quote:
-      "We finally see which ads produce real jobs—not just form fills.",
+      "I\u2019m quite positive about the future of my business now \u2014 just based on the sheer amount of work and leads I have coming in compared to before.",
+    quoteAttribution: "— Aaron",
+    wistiaId: "r7miiklxcu",
   },
-  {
-    id: "sarah-precision-roofing",
-    clientName: "Sarah",
-    companyAndTrade: "Precision Roofing Co.",
-    metrics: [
-      { value: "190+", label: "Booked inspections" },
-      { value: "5.2x", label: "Return on ad spend" },
-      { value: "$310K", label: "Attributed revenue" },
-    ],
-    summary:
-      "Seasonal demand swings used to wreck pacing. We stabilized budget allocation and added pipeline visibility so the crew stays booked without last-minute panic.",
-    quote:
-      "The pipeline isn’t a guessing game anymore—we know what’s coming.",
-  },
-  {
-    id: "david-eldorado-builds",
-    clientName: "David",
-    companyAndTrade: "Eldorado Builds",
-    metrics: [
-      { value: "340+", label: "Qualified calls" },
-      { value: "12x", label: "Pipeline ROI" },
-      { value: "$580K", label: "Closed project value" },
-    ],
-    summary:
-      "High-ticket remodel leads needed slower, consultative follow-up. Automated nurture plus clear CRM stages cut drop-off between estimate and signed contract.",
-    quote:
-      "Leads get handled the same way every time—that consistency closed the gap.",
-  },
+  // -- Restore when video is ready --
+  // {
+  //   id: "sarah-precision-roofing",
+  //   clientName: "Sarah",
+  //   companyAndTrade: "Precision Roofing Co.",
+  //   metrics: [
+  //     { value: "190+", label: "Booked inspections" },
+  //     { value: "5.2x", label: "Return on ad spend" },
+  //     { value: "$310K", label: "Attributed revenue" },
+  //   ],
+  //   summary:
+  //     "Seasonal demand swings used to wreck pacing. We stabilized budget allocation and added pipeline visibility so the crew stays booked without last-minute panic.",
+  //   quote:
+  //     "The pipeline isn\u2019t a guessing game anymore\u2014we know what\u2019s coming.",
+  // },
+  // -- Restore when video is ready --
+  // {
+  //   id: "david-eldorado-builds",
+  //   clientName: "David",
+  //   companyAndTrade: "Eldorado Builds",
+  //   metrics: [
+  //     { value: "340+", label: "Qualified calls" },
+  //     { value: "12x", label: "Pipeline ROI" },
+  //     { value: "$580K", label: "Closed project value" },
+  //   ],
+  //   summary:
+  //     "High-ticket remodel leads needed slower, consultative follow-up. Automated nurture plus clear CRM stages cut drop-off between estimate and signed contract.",
+  //   quote:
+  //     "Leads get handled the same way every time\u2014that consistency closed the gap.",
+  // },
 ];

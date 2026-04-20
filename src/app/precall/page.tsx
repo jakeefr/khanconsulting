@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import { CTAButton } from "@/components/CTAButton";
-import { CaseStudyVideoSlot } from "@/components/CaseStudyVideoSlot";
+import { WistiaPrecallEmbed } from "@/components/WistiaPrecallEmbed";
 import { CaseStudyBlock } from "@/components/CaseStudyBlock";
 import { caseStudies } from "@/content/clientResults";
 import { LuArrowDown, LuCheck } from "react-icons/lu";
@@ -41,23 +41,7 @@ export default function PrecallPage() {
 
           {/* ── Precall video embed ── */}
           <div className="mt-10 md:mt-12 max-w-4xl mx-auto">
-            {/*
-              TO EMBED YOUR VIDEO:
-              Replace the empty <CaseStudyVideoSlot /> below with:
-
-              <CaseStudyVideoSlot label="Precall overview">
-                <iframe
-                  className="absolute inset-0 h-full w-full"
-                  src="https://www.loom.com/embed/YOUR_ID"   ← Loom
-                  // src="https://player.vimeo.com/video/YOUR_ID"  ← Vimeo
-                  // src="https://www.youtube.com/embed/YOUR_ID"   ← YouTube
-                  title="Khan Consulting — precall overview"
-                  allow="autoplay; fullscreen"
-                  allowFullScreen
-                />
-              </CaseStudyVideoSlot>
-            */}
-            <CaseStudyVideoSlot label="Precall overview video" />
+            <WistiaPrecallEmbed />
           </div>
         </Container>
       </Section>
