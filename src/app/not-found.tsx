@@ -12,13 +12,13 @@ export default function NotFound() {
       <div className="flex flex-wrap gap-4 justify-center">
         <Link
           href="/"
-          className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-2xl bg-neutral-900 border border-neutral-900 text-white hover:bg-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+          className="liquid-glass-strong inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-2xl text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30 focus-visible:ring-offset-2"
         >
           Home
         </Link>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-2xl bg-white border border-neutral-200 text-neutral-900 hover:bg-neutral-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+          className="liquid-glass inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-2xl text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/40 focus-visible:ring-offset-2"
         >
           Contact
         </Link>

@@ -10,7 +10,7 @@ export function MetricCard({
   sublabel,
 }: MetricCardProps) {
   return (
-    <div className="rounded-xl border border-neutral-200/60 border-t-2 border-t-neutral-800 bg-white/70 backdrop-blur-sm px-4 py-5 md:px-5 md:py-6 text-center transition-all duration-200 hover:border-neutral-300/90 hover:bg-neutral-50/80 hover:shadow-surface-md">
+    <div className="liquid-glass rounded-xl px-4 py-5 md:px-5 md:py-6 text-center">
       <div className="text-xl md:text-2xl font-bold text-neutral-900 tracking-tight leading-tight">
         {value}
       </div>

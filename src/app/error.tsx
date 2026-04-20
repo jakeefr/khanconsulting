@@ -14,7 +14,7 @@ export default function Error({
       <button
         type="button"
         onClick={() => reset()}
-        className="px-5 py-2.5 rounded-2xl bg-neutral-900 border border-neutral-900 text-white hover:bg-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+        className="liquid-glass-strong px-5 py-2.5 rounded-2xl text-neutral-900 font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30 focus-visible:ring-offset-2"
       >
         Try again
       </button>

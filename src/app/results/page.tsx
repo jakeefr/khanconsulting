@@ -123,7 +123,7 @@ export default function ResultsPage() {
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors"
+                className="liquid-glass-strong inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-neutral-900 rounded-2xl"
               >
                 Get Started
               </Link>

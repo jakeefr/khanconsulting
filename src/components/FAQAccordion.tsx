@@ -15,7 +15,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="rounded-xl border border-neutral-200/70 bg-white/65 backdrop-blur-sm divide-y divide-neutral-200/70">
+    <div className="liquid-glass rounded-xl divide-y divide-neutral-200/30">
       {items.map((item, i) => (
         <div key={i} className="px-5 py-4 md:px-6 md:py-5 first:rounded-t-xl last:rounded-b-xl">
           <button

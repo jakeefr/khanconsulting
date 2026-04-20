@@ -2,7 +2,7 @@ type SectionVariant = "default" | "hero" | "tight";
 
 const variantClass: Record<SectionVariant, string> = {
   default: "py-16 md:py-24",
-  hero: "pt-24 md:pt-32 pb-14 md:pb-20",
+  hero: "pt-28 md:pt-36 pb-14 md:pb-20",
   tight: "py-12 md:py-16",
 };
 

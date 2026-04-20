@@ -23,7 +23,7 @@ export function CaseStudyVideoSlot({ children, label }: CaseStudyVideoSlotProps)
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-2xl border border-neutral-200/90 bg-gradient-to-br from-neutral-100 via-neutral-50 to-neutral-100 shadow-[0_1px_0_rgb(0_0_0/0.04)]"
+      className="liquid-glass relative w-full rounded-2xl"
       aria-label={label}
     >
       <div className="relative aspect-video w-full">

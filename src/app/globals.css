@@ -24,6 +24,45 @@ body {
   @apply antialiased text-neutral-900 bg-white;
 }
 
+/* ── Liquid glass (light-theme adaptation of glassmorphism) ─────────────── */
+.liquid-glass {
+  background: rgba(0, 0, 0, 0.03);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 4px 24px rgba(0, 0, 0, 0.04);
+  position: relative;
+  isolation: isolate;
+  transition: box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.liquid-glass:hover {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.liquid-glass-strong {
+  background: rgba(0, 0, 0, 0.06);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  position: relative;
+  isolation: isolate;
+  transition: box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.liquid-glass-strong:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.10);
+  transform: translateY(-2px);
+}
+
 /* GooeyNav - from @react-bits/GooeyNav, scoped to avoid hydration mismatch from inline <style> */
 .gooey-nav {
   --linear-ease: linear(0, 0.068, 0.19 2.7%, 0.804 8.1%, 1.037, 1.199 13.2%, 1.245, 1.27 15.8%, 1.274, 1.272 17.4%, 1.249 19.1%, 0.996 28%, 0.949, 0.928 33.3%, 0.926, 0.933 36.8%, 1.001 45.6%, 1.013, 1.019 50.8%, 1.018 54.4%, 1 63.1%, 0.995 68%, 1.001 85%, 1);

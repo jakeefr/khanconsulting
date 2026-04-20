@@ -3,6 +3,8 @@
 import { useState, FormEvent, useEffect } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
+import { FadeIn } from "@/components/FadeIn";
+
 const AD_SPEND_OPTIONS = [
   "Select range",
   "Under $5k/month",
@@ -72,23 +74,25 @@ export function ContactPageContent() {
     <>
       <Section className="pt-24 md:pt-32 pb-12">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-semibold text-neutral-900 leading-tight tracking-tight">
-              Get in touch
-            </h1>
-            <p className="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
-            Book a free call or send us a message. We'll respond within 1–2
-            business days.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-semibold text-neutral-900 leading-tight tracking-tight">
+                Get in touch
+              </h1>
+              <p className="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
+              Book a free call or send us a message. We'll respond within 1–2
+              business days.
+              </p>
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 
       <Section className="relative pb-24">
         <Container>
-          <div className="rounded-xl border border-neutral-200/70 bg-white/75 backdrop-blur-sm p-8 md:p-12">
+          <div className="rounded-xl liquid-glass p-8 md:p-12">
             <div className="grid md:grid-cols-5 gap-12">
-              <div className="md:col-span-2">
+              <FadeIn className="md:col-span-2">
                 <h2 className="text-xl font-semibold text-neutral-900 mb-4">
                   Direct contact
                 </h2>
@@ -98,10 +102,10 @@ export function ContactPageContent() {
                 <p className="mt-2 text-neutral-600 text-sm">
                   Phone: (405) 239-8122
                 </p>
-              </div>
-              <div className="md:col-span-3">
+              </FadeIn>
+              <FadeIn delay={0.15} className="md:col-span-3">
                 {showSuccess ? (
-                  <div className="rounded-2xl md:rounded-3xl bg-neutral-50 border border-neutral-200/90 shadow-surface p-8 text-center">
+                  <div className="rounded-2xl md:rounded-3xl liquid-glass p-8 text-center">
                     <p className="text-lg font-medium text-neutral-900">
                       Sent. We will get back to you soon.
                     </p>
@@ -241,12 +245,12 @@ export function ContactPageContent() {
                   )}
                   <button
                     type="submit"
-                    className="w-full md:w-auto px-8 py-3 rounded-2xl font-semibold bg-neutral-900 border border-neutral-900 text-white hover:bg-neutral-800 hover:border-neutral-800 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    className="liquid-glass-strong w-full md:w-auto px-8 py-3 rounded-2xl font-semibold text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30 focus-visible:ring-offset-2"
                   >
                     Send message
                   </button>
                 </form>
-              </div>
+              </FadeIn>
             </div>
           </div>
         </Container>
@@ -273,7 +277,7 @@ export function ContactPageFallback() {
       </Section>
       <Section className="relative pb-24">
         <Container>
-          <div className="rounded-xl border border-neutral-200/70 bg-white/75 backdrop-blur-sm p-8 md:p-12">
+          <div className="rounded-xl liquid-glass p-8 md:p-12">
             <div className="grid md:grid-cols-5 gap-12">
               <div className="md:col-span-2">
                 <h2 className="text-xl font-semibold text-neutral-900 mb-4">

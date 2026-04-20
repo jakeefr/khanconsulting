@@ -6,11 +6,11 @@ import { ScrollToHash } from "@/components/ScrollToHash";
 import ParallaxBackground from "@/components/ParallaxBackgroundDynamic";
 
 export const metadata: Metadata = {
-  title: "Khan Consulting | Growth systems for booked contractor work",
+  title: "Khan Consulting",
   description:
     "Pipeline and follow-up systems for owner-led contractors—clear demand, fast qualification, and reporting from first touch to booked job.",
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.png",
   },
 };
 

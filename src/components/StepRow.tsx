@@ -15,7 +15,7 @@ export function StepRow({
 }: StepRowProps) {
   return (
     <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start py-8 border-b border-neutral-200/70 last:border-b-0">
-      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-neutral-900 text-white text-sm font-semibold flex items-center justify-center tabular-nums">
+      <div className="liquid-glass-strong flex-shrink-0 w-10 h-10 rounded-full text-neutral-900 text-sm font-semibold flex items-center justify-center tabular-nums">
         {step}
       </div>
       <div className="flex-1 min-w-0">
