@@ -102,31 +102,31 @@ export default function HomePage() {
             <FadeIn delay={1.1}>
               <div className="mt-12 md:mt-14 max-w-3xl mx-auto">
                 <div className="h-px w-full bg-neutral-200/70" aria-hidden="true" />
-                <dl className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
+                <dl className="mt-8 grid grid-cols-3 gap-4 sm:gap-6">
                   <div className="text-center">
                     <dt className="sr-only">Opportunities booked</dt>
-                    <dd className="text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
+                    <dd className="text-xl sm:text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
                       250+
                     </dd>
-                    <div className="mt-1.5 text-xs md:text-sm text-neutral-500">
+                    <div className="mt-1 sm:mt-1.5 text-[10px] sm:text-xs md:text-sm text-neutral-500">
                       Opportunities booked
                     </div>
                   </div>
                   <div className="text-center">
                     <dt className="sr-only">ROI</dt>
-                    <dd className="text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
+                    <dd className="text-xl sm:text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
                       40x
                     </dd>
-                    <div className="mt-1.5 text-xs md:text-sm text-neutral-500">
+                    <div className="mt-1 sm:mt-1.5 text-[10px] sm:text-xs md:text-sm text-neutral-500">
                       ROI
                     </div>
                   </div>
                   <div className="text-center">
                     <dt className="sr-only">Client revenue</dt>
-                    <dd className="text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
+                    <dd className="text-xl sm:text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">
                       $4.5M+
                     </dd>
-                    <div className="mt-1.5 text-xs md:text-sm text-neutral-500">
+                    <div className="mt-1 sm:mt-1.5 text-[10px] sm:text-xs md:text-sm text-neutral-500">
                       Client revenue
                     </div>
                   </div>
@@ -180,16 +180,16 @@ export default function HomePage() {
           <FadeIn delay={0.15}>
             <div className="mt-10 max-w-5xl mx-auto">
               <div className="liquid-glass rounded-2xl">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y divide-neutral-200/30 sm:divide-x sm:divide-y-0 lg:divide-x">
+                <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 divide-neutral-200/30 sm:divide-x lg:divide-x">
                   {homeMeta.whoNiches.map((niche) => {
                     const Icon = whoIconByNiche[niche] ?? LuHardHat;
                     return (
                       <div
                         key={niche}
-                        className="group flex flex-col items-center justify-center text-center px-7 py-9 min-h-[108px] bg-transparent transition-all duration-200 hover:bg-black/[0.02]"
+                        className="group flex flex-col items-center justify-center text-center px-3 py-4 sm:px-7 sm:py-9 sm:min-h-[108px] bg-transparent transition-all duration-200 hover:bg-black/[0.02]"
                       >
-                        <Icon className="h-5 w-5 text-neutral-700 transition-transform duration-300 ease-out group-hover:scale-125 group-hover:-translate-y-1" aria-hidden="true" />
-                        <div className="mt-3 text-[13px] sm:text-[14px] font-semibold text-neutral-800 tracking-tight">
+                        <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-neutral-700 transition-transform duration-300 ease-out group-hover:scale-125 group-hover:-translate-y-1" aria-hidden="true" />
+                        <div className="mt-1.5 sm:mt-3 text-[10px] sm:text-[14px] font-semibold text-neutral-800 tracking-tight leading-tight">
                           {niche}
                         </div>
                       </div>
@@ -279,7 +279,7 @@ export default function HomePage() {
                   {homeMeta.bookBullets.map((b) => (
                     <li key={b} className="flex items-start gap-3">
                       <svg aria-hidden="true" className="mt-[3px] h-4 w-4 shrink-0 text-neutral-500" viewBox="0 0 16 16" fill="none">
-                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       {b}
                     </li>
