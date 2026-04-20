@@ -86,7 +86,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-neutral-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-neutral-500">
           <div className="text-center sm:text-left">
             <p>© {new Date().getFullYear()} Khan Consulting. All rights reserved.</p>
-            <p className="mt-1 text-neutral-400">Made by WernersWorks</p>
+            <p className="mt-1 text-neutral-400">Made by <a href="https://www.wernersworks.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-200 transition-colors">WernersWorks</a></p>
           </div>
           <Link
             href="/precall"

@@ -274,8 +274,8 @@ export default function HomePage() {
               <p className={`${intro} mt-4 mx-auto`}>{homeMeta.bookSupport}</p>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <div className="mt-10 flex justify-center">
-                <ul className="text-left space-y-4 text-[15px] text-neutral-600 w-full max-w-sm">
+              <div className="mt-10 inline-block text-left">
+                <ul className="space-y-4 text-[15px] text-neutral-600">
                   {homeMeta.bookBullets.map((b) => (
                     <li key={b} className="flex items-start gap-3">
                       <svg aria-hidden="true" className="mt-[3px] h-4 w-4 shrink-0 text-neutral-500" viewBox="0 0 16 16" fill="none">
