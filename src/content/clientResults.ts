@@ -14,6 +14,9 @@ export type ClientCaseStudy = {
   quoteAttribution?: string;
   /** Optional Wistia media ID — renders an inline Wistia embed instead of the placeholder */
   wistiaId?: string;
+  /** Optional aspect ratio for the Wistia player web component (e.g. "1.889763779527559").
+   *  When set, uses <wistia-player> instead of the standard iframe embed. */
+  wistiaAspect?: string;
 };
 
 export const clientResultsIntro = {
@@ -26,6 +29,23 @@ export const clientResultsIntro = {
 };
 
 export const caseStudies: ClientCaseStudy[] = [
+  {
+    id: "hesham-platinum-epoxy-flooring",
+    clientName: "Hesham",
+    companyAndTrade: "Platinum Epoxy Flooring",
+    metrics: [
+      { value: "$2.0K", label: "Ad Spend" },
+      { value: "$40K", label: "Revenue" },
+      { value: "20x", label: "Return" },
+    ],
+    summary:
+      "Hesham was struggling to keep work coming in consistently and had been burned by bad marketing in the past. Once he started using our system, he began bringing in more consistent opportunities and growing with more confidence.",
+    quote:
+      "I\u2019ve been burned by other agencies before, but this is the first one that actually delivered.",
+    quoteAttribution: "— Hesham",
+    wistiaId: "ep3ymdvedr",
+    wistiaAspect: "1.889763779527559",
+  },
   {
     id: "aaron-north53-construction",
     clientName: "Aaron",

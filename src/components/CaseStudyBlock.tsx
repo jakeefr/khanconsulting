@@ -11,14 +11,14 @@ export function CaseStudyBlock({
 }) {
   const detail = (
     <div className="flex flex-col justify-center min-w-0">
-      <div className="liquid-glass rounded-xl px-4 py-4 sm:px-5 sm:py-5 w-fit">
-        <div className="flex items-start gap-8 sm:gap-10">
+      <div className="liquid-glass rounded-xl px-5 py-5 sm:px-7 sm:py-6 w-fit">
+        <div className="flex items-start gap-9 sm:gap-12">
           {study.metrics.map((m) => (
             <div key={m.label}>
-              <p className="text-lg sm:text-xl font-semibold text-neutral-900 tracking-tight tabular-nums">
+              <p className="text-xl sm:text-2xl font-semibold text-neutral-900 tracking-tight tabular-nums">
                 {m.value}
               </p>
-              <p className="mt-1.5 text-[11px] sm:text-xs text-neutral-500 leading-snug">
+              <p className="mt-1.5 text-xs sm:text-[13px] text-neutral-500 leading-snug">
                 {m.label}
               </p>
             </div>
@@ -26,7 +26,7 @@ export function CaseStudyBlock({
         </div>
       </div>
 
-      <p className="mt-7 text-sm font-medium text-neutral-900">
+      <p className="mt-7 text-[15px] sm:text-base font-semibold text-neutral-900">
         {study.clientName}
         <span className="mx-1.5 text-neutral-400" aria-hidden>
           —
@@ -56,7 +56,7 @@ export function CaseStudyBlock({
   const media = (
     <div className="min-w-0">
       {study.wistiaId ? (
-        <WistiaVideoEmbed mediaId={study.wistiaId} />
+        <WistiaVideoEmbed mediaId={study.wistiaId} aspect={study.wistiaAspect} />
       ) : (
         <CaseStudyVideoSlot label={`${study.clientName} — video story`} />
       )}
