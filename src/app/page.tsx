@@ -248,6 +248,42 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      <Section id="about" className="border-t border-neutral-200/70">
+        <Container>
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <FadeIn>
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-500 mb-4">
+                  About Us
+                </p>
+                <h2 className={h2}>The story behind the system</h2>
+                <div className="mt-6 space-y-5 text-[15px] md:text-base text-neutral-600 leading-relaxed">
+                  <p>
+                    My name is Faris Khan, and I started Khan Consulting after seeing a problem in the contracting industry firsthand. My father was a roofer and often talked about how inconsistent business could be; some months were busy, while others were much slower. Using my knowledge of technology as a younger generation, I helped him create a more consistent way to generate new opportunities.
+                  </p>
+                  <p>
+                    After graduating from the University of Oklahoma, I decided to pursue entrepreneurship and build a business around the industry I knew best. What started as a solution for my father&apos;s business has now grown into Khan Consulting, where we passionately help contractors build more consistent pipelines and create more predictable growth.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <div className="flex justify-center lg:justify-end">
+                <div className="w-full max-w-[340px] lg:max-w-[380px]">
+                  <div className="rounded-2xl ring-1 ring-neutral-200/60 shadow-xl shadow-neutral-900/8 overflow-hidden">
+                    <img
+                      src="/faris-khan.jpg"
+                      alt="Faris Khan, founder of Khan Consulting"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </Container>
+      </Section>
+
       <Section id="faq" variant="tight" className="border-t border-neutral-200/70 bg-white/35">
         <Container>
           <FadeIn>
