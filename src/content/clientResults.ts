@@ -46,22 +46,6 @@ export const caseStudies: ClientCaseStudy[] = [
     wistiaId: "ep3ymdvedr",
     wistiaAspect: "1.889763779527559",
   },
-  {
-    id: "aaron-north53-construction",
-    clientName: "Aaron",
-    companyAndTrade: "North 53 Construction",
-    metrics: [
-      { value: "$1.8K", label: "Ad Spend" },
-      { value: "$200K", label: "Revenue" },
-      { value: "110x", label: "Return" },
-    ],
-    summary:
-      "Aaron had grown mostly through word of mouth and referrals, but the flow of new work was becoming too unpredictable. He needed a more consistent way to create opportunities, keep his pipeline active, and bring in steady jobs without waiting on referrals.",
-    quote:
-      "I\u2019m quite positive about the future of my business now \u2014 just based on the sheer amount of work and leads I have coming in compared to before.",
-    quoteAttribution: "— Aaron",
-    wistiaId: "r7miiklxcu",
-  },
   // -- Restore when video is ready --
   // {
   //   id: "sarah-precision-roofing",
